@@ -19,19 +19,27 @@ public class Main {
 
             int i = 0;
 
-
+            // Article
             Element ahref = title.select("a").get(i);
             String absHref = ahref.attr("abs:href");
-            System.out.println(absHref);
-            System.out.println(title.getElementsByAttributeStarting("title").attr("title"));
+            String titleArticle = title.getElementsByAttributeStarting("title").attr("title");
+
+            // Author
             Document document = Jsoup.connect(absHref).get();
             Element author = document.getElementsByClass("author-name").get(i);
-            Element ref = author.select("a").get(i);
-            String authorName = ref.text();
-            System.out.println(authorName);
+            Element refAuthor = author.select("a").get(i);
+            String authorName = refAuthor.text();
 
+            // Date
+            Element articleDate = document.getElementsByClass("article-date").get(i);
+            Element refDate = articleDate.select("time").get(i);
+            String date = refDate.text();
 
-
+            // Output
+            System.out.println(absHref); // url
+            System.out.println(titleArticle); // titulo
+            System.out.println(authorName); // Nome do autor
+            System.out.println(date);
 
         }
 
