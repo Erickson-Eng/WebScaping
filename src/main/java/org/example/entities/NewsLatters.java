@@ -2,6 +2,7 @@ package org.example.entities;
 
 public class NewsLatters {
 
+    private Integer id;
     private String url;
     private String title;
     private String caption;
