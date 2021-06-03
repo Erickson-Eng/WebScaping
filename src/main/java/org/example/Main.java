@@ -33,7 +33,7 @@ public class Main {
             Element refDate = articleDate.select("time").get(j);
             String date = refDate.attr("datetime");
             DateTimeFormatter inputDtf = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss-03:00");
-            DateTimeFormatter outputDtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+            DateTimeFormatter outputDtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
             LocalDateTime localDateTime = LocalDateTime.parse(date, inputDtf);
             String finalDate = outputDtf.format(localDateTime);
 
