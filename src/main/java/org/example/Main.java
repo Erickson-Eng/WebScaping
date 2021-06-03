@@ -7,13 +7,8 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 public class Main {
 
@@ -42,15 +37,6 @@ public class Main {
             LocalDateTime localDateTime = LocalDateTime.parse(date, inputDtf);
             String finalDate = outputDtf.format(localDateTime);
 
-
-//            DateTimeFormatter dateTimeFormatterInput = DateTimeFormatter.ofPattern("2021-06-02'T'17:22:14'-03:00'",Locale.getDefault());
-//            DateTimeFormatter dateTimeFormatterOutput = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss",Locale.getDefault());
-//            LocalDateTime localDateTime = LocalDateTime.parse(date,dateTimeFormatterInput);
-//            String formattedDate = dateTimeFormatterOutput.format(localDateTime);
-//            System.out.println(formattedDate);
-
-
-
             Elements articleBody = document.getElementsByClass("col-md-9 col-lg-8 col-xl-6  m-sm-auto m-lg-0 article-content");
 
             System.out.println(abHref);
@@ -64,40 +50,5 @@ public class Main {
             }
             System.out.println();
         }
-//        for (Element title: elementsList
-//             ) {
-//
-//            int i = 0;
-//
-//            // Article
-//            Element ahref = title.select("a").get(i);
-//            String absHref = ahref.attr("abs:href");
-//            String titleArticle = title.getElementsByAttributeStarting("title").attr("title");
-//
-//            // Author
-//            Document document = Jsoup.connect(absHref).get();
-//            Element author = document.getElementsByClass("author-name").get(i);
-//            Element refAuthor = author.select("a").get(i);
-//            String authorName = refAuthor.text();
-//
-//            // Date
-//            Element articleDate = document.getElementsByClass("article-date").get(i);
-//            Element refDate = articleDate.select("time").get(i);
-//            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-//            String date = refDate.attr("datetime");
-//
-//            Elements articleBody = document.getElementsByClass("col-md-9 col-lg-8 col-xl-6  m-sm-auto m-lg-0 article-content");
-//
-//            // Output
-//            System.out.println("Url: " +absHref); // url
-//            System.out.println("Titulo: "+titleArticle); // titulo
-//            System.out.println("Author: "+authorName); // Nome do autor
-//            System.out.println("Data: "+date);
-//            for (Element element: articleBody
-//            ) {
-//                System.out.println(element.text());
-//            }
-//            System.out.println();
-//        }
     }
 }
