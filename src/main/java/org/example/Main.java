@@ -43,11 +43,11 @@ public class Main {
             String date = refDate.attr("datetime");
             String dateTime = DateUtil.brazilDateTimeFormatter(date);
 
-            System.out.println(abHref);
-            System.out.println(titleArticle1);
-            System.out.println(subTitleText);
-            System.out.println(authorName);
-            System.out.println(dateTime);
+            System.out.println("Url: " + abHref);
+            System.out.println("Article name: "+titleArticle1);
+            System.out.println("Subtitle: "+subTitleText);
+            System.out.println("Author: "+authorName);
+            System.out.println("Date: " + dateTime);
 
             // Conteuodo do artigo
             Elements articleBody = document.getElementsByClass("col-md-9 col-lg-8 col-xl-6  m-sm-auto m-lg-0 article-content");
