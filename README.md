@@ -7,13 +7,13 @@ Some site information is being fetched from your url.
 
 Locate the WebScrapy-1.0-SNAPSHOT file in the target folder
 ```bash
-  cd WebScrapy/target
+  cd WebScraping/target
 ```
 
 To deploy this project run
 
 ```bash
-  Java -jar WebScrapy-1.0-SNAPSHOT.jar
+  java -jar WebScrapy-1.0-SNAPSHOT.jar
 ```
 
 
