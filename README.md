@@ -29,9 +29,10 @@ Start the server
 
 ## Demo
 
-Insert gif or link to demo
+<p align="center">
+    <img width="480" height="270" src="src/main/resources/assets/to_readme/giphy.gif">
+<\p>
 
-https://media.giphy.com/media/7uLOhRabulXYqpR2aM/giphy.gif
 ## Authors
 
 - [@erickson-eng](https://github.com/Erickson-Eng)
