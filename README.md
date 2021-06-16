@@ -31,7 +31,6 @@ Start the server
 
 <p align="center">
     <img width="480" height="270" src="src/main/resources/assets/to_readme/giphy.gif">
-<\p>
 
 ## Authors
 
