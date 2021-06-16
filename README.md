@@ -1,24 +1,40 @@
 
-# Data Scraping Project
+# Project Webscraping
 
-Some site information is being fetched from your url.
+Project that scrapes the last three articles on the site: https://www.infomoney.com.br/mercados/ and prints the information.
+Information is removed dynamically, so it is modified at all times.
 
-## Deployment
 
-Locate the WebScrapy-1.0-SNAPSHOT file in the target folder
-```bash
-  cd WebScraping/target
-```
 
-To deploy this project run
+## Run Locally
+
+Clone the project
 
 ```bash
-  java -jar WebScrapy-1.0-SNAPSHOT.jar
+  git clone https://github.com/Erickson-Eng/WebScraping.git
+```
+
+Go to the project directory
+
+```bash
+  cd WebScraping
+```
+
+Start the server
+
+```bash
+  java -jar .\target\WebScrapy-1.0-SNAPSHOT.jar
 ```
 
 
+## Demo
+
+Insert gif or link to demo
+
+https://media.giphy.com/media/7uLOhRabulXYqpR2aM/giphy.gif
 ## Authors
 
 - [@erickson-eng](https://github.com/Erickson-Eng)
+
 
   
