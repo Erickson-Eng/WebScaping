@@ -1,6 +1,7 @@
 package org.example;
 
-import org.example.util.DateUtil;
+import org.example.entities.Article;
+import org.example.utils.DateUtil;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -42,19 +43,19 @@ public class Main {
             Element refDate = articleDate.select("time").get(j);
             String date = refDate.attr("datetime");
             String dateTime = DateUtil.brazilDateTimeFormatter(date);
-
-            System.out.println("Url: " + abHref);
-            System.out.println("Article name: "+titleArticle1);
-            System.out.println("Subtitle: "+subTitleText);
-            System.out.println("Author: "+authorName);
-            System.out.println("Date: " + dateTime);
-
+            // corpo da publicação
+            String texts = "";
             // Conteuodo do artigo
             Elements articleBody = document.getElementsByClass("col-md-9 col-lg-8 col-xl-6  m-sm-auto m-lg-0 article-content");
-            for (Element element: articleBody
-                 ) {
-                System.out.println(element.text());
-            }
+//            articleBody.forEach(n -> texts = n.text());
+
+
+            for (Element element: articleBody)
+                texts = element.text();
+
+
+            Article newArticle = new Article(abHref,titleArticle1,subTitleText,authorName,dateTime,texts);
+            System.out.println(newArticle);
             System.out.println();
         }
     }
